@@ -1,15 +1,11 @@
-CakePHP Overview
+بررسی کلی CakePHP
 ################
 
-Welcome to the Cookbook, the manual for the CakePHP web application
-framework that makes developing a piece of cake!
+به کتاب آشپزی خوش اومدید، کتاب راهنما برای CakePHP، فریمورک برنامه های وب، که توسعه وب رو مثل آب خوردن آسون و راحت می کنه.
 
-This manual assumes that you have a general understanding of PHP
-and a basic understanding of object-oriented programming (OOP).
-Different functionality within the framework makes use of different
-technologies – such as SQL, JavaScript, and XML – and this manual
-does not attempt to explain those technologies, only how they are
-used in context.
+این راهنما بر این باور است که شما فهم کلی در مورد PHP و آشنایی با مفاهیم اصلی برنامه نویسی شئ گرا دارید.
+
+قابلیت های متفاوت فریمورک باعث می شه که از دیگر تکنولوژی هایی مثل SQL، JavaScript و XML هم داخل فریمورک استفاده بشه و البته این راهنما سعی نداره که در مورد این تکنولوژی ها توضیح بده بجر اینکه بطور کلی چطور استفاده می شن.
 
 .. toctree::
     :maxdepth: 1
@@ -20,5 +16,5 @@ used in context.
 
 
 .. meta::
-    :title lang=en: CakePHP Overview
-    :keywords lang=en: web application framework,model view controller,object oriented programming,piece of cake,cookbook,functionality,xml,cakephp
+    :title lang=fa: بررسی کلی CakePHP
+    :keywords lang=fa: فریمورک برنامه های وب,model view controller,برنامه نویسی شئ گرا,آسون و راحت,کتاب آشپزی,قابلیت,xml,cakephp
