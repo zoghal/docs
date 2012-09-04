@@ -1,58 +1,43 @@
-Deployment
+استفاده از برنامه
 ##########
 
-Once your application is complete, or even before that you'll want to deploy it.
-There are a few things you should do when deploying a CakePHP application.
+در صورتی که برنامه تون تکمیل شده باشه و یا حتی قبل از اون، ممکنه که یخواهید ازش استفاده کنید.
+که چند نکته ای وجود داره، که قبل از استفاده از برنامه CakePHP باید انجام بدید.
 
-Set document root
+تعیین document root
 =================
 
-Setting the document root correctly on your application is an important step to
-keeping your code secure and your application safer. CakePHP applications,
-should have the document root set to the application's ``app/webroot``.  This
-makes the application and configuration files inaccessible through a URL.
-Setting the document root is different for different webservers.  See the
-:doc:`/installation/advanced-installation` documentation for webserver specific
-information.
+تنظیم صحیح document root در برنامتون یکی از مهمترین گام ها برای امن نگه داشتن کدها و برنامتون هست. برنامه های CakePHP، باید document root شون در برنامه، به مسیر ``app/webroot`` تعیین شده باشه. این باعث می شه که از طریق URL نشه به فایل های تنظیمان و برنامه دسترسی داشت.
+نحوه تعیین document root در هر وب سروری تفاوت می کنه. که برای اطلاعات خاص مربوط به وب سرور بخش :doc:`/installation/advanced-installation` در مستندات رو ببینید.
 
-Update core.php
+آپدیت فایل core.php
 ===============
 
-Updating core.php, specifically the value of ``debug`` is extremely important.
-Turning debug = 0 disables a number of development features that should never be
-exposed to internet at large.  Disabling debug changes the following types of
-things:
+آپدیت کردن فایل core.php، بخصوص مقدار ``debug`` به شدت مهمه.
+تغییر مقدار debug به صفر (debug = 0) یک سری از امکانات در حین توسعه (development) رو غیرفعال می کنه که بطور کلی هم هیچ وقت نبایستی بدون غیرفعال کردنشون برناممه رو در اینترنت بصورت عمومی ارائه کرد. غیرفعال کردن خطاگیری (debug) یک سری از موارد زیر رو تغییر می ده:
 
-* Debug messages, created with :php:func:`pr()` and :php:func:`debug()` are
-  disabled.
-* Core CakePHP caches are flushed every 99 years, instead of every 10 seconds as
-  in development.
+* پیام های مربوط به خطاگیری (Debug) که توسط متدهای :php:func:`pr()` و :php:func:`debug()` ایجاد می شن، غیرفعال می شن.
+* کش هسته CakePHP هر 99 سال پاکسازی می شه، بجای هر 10 ثانیه که در حین توسعه (development) اتفاق می افته.
 * Error views are less informative, and give generic error messages instead.
-* Errors are not displayed.
+* خطا ها نمایش داده نمی شن.
 * Exception stack traces are disabled.
 
-In addition to the above, many plugins and application extensions use ``debug``
-to modify their behavior.
+در کنار مورد فوق، بسیاری از پلاگین ها و (application extensions ها) از ``debug`` برای تغییر رفتارشون استفاده می کنن.
 
 
-Multiple CakePHP applications using the same core
+برنامه های چندگانه CakePHP که از هسته مشترک استفاده می کنن
 =================================================
 
-There are a few ways you can configure multiple applications to use the same
-CakePHP core.  You can either use PHP's ``include_path`` or set the
-``CAKE_CORE_INCLUDE_PATH`` in your application's ``webroot/index.php``.
-Generally using PHP's ``include_path`` is easier and more robust.  CakePHP comes
-preconfigured to look on the ``include_path`` as well so it's simple to use.
+چند راه وجود داره که می شه برنامه های چندگانه که بطور مشترک از یک هسته CakePHP استفاده می کنن رو تنظیم کرد. که یا می تونید از دستور ``include_path`` در خود PHP استفاده کرد و یا با اعمال کردن ``CAKE_CORE_INCLUDE_PATH`` در فایل ``webroot/index.php`` در برنامه تون.
+بطور کلی استفاده از دستور ``include_path`` خود PHP ، خیلی آسون و سر راسته. که خود CakePHP هم طوری از پیش تنظیم شده که ``include_path`` رو چک می کنه و اینکه استفاده ازش هم آسونه.
 
-In your ``php.ini`` file locate the existing ``include_path`` directive, and
-either append to it or add an ``include_path`` directive::
+در فایل ``php.ini`` دستور ``include_path`` رو پیدا کرده و سپس یا به دستور مربوطه اضافه کنید و یا یک دستور ``include_path`` خودتون اضافه کنید::
 
     include_path = '.:/usr/share/php:/usr/share/cakephp-2.0/lib'
 
-This assumes you are running a \*nix server, and have CakePHP in
-``/usr/share/cakephp-2.0``.
+که در این دستور فرض شده شما از یک سرور \*nix (یونیکس / لینوکس) استفاده می کنید و CakePHP هم در آدرس ``/usr/share/cakephp-2.0`` قرار داره.
 
 
 .. meta::
-    :title lang=en: Deployment
+    :title lang=fa: استفاده از برنامه
     :keywords lang=en: stack traces,application extensions,set document,installation documentation,development features,generic error,document root,func,debug,caches,error messages,configuration files,webroot,deployment,cakephp,applications
